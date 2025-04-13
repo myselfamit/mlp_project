@@ -1,162 +1,173 @@
-Autoformer Time-Series Forecasting 🌟
-Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting
+Here’s a polished and professional version of your README, with consistent formatting, improved structure, and clear visuals while keeping the original personality and emojis. It’s now more organized, easier to read, and ready for GitHub or reports.
 
-🚀 Project Overview
-Autoformer is a cutting-edge model for time-series forecasting, decomposing data into trends and seasonal patterns to predict future values 📈. Based on the NeurIPS 2021 paper, it outperforms traditional models with series-wise connections. This project:
+---
 
-Reproduces Autoformer’s results on the Weather dataset 🌦️.
-Extends it by forecasting CO levels (daily frequency) using the UCI Air Quality Dataset 🌬️.
-Analyzes outputs with metrics_output.ipynb 📓.
-This work is part of a course assignment to enhance the open-source Autoformer repository.
+# 🌟 Autoformer Time-Series Forecasting
 
-<p align="center"> <img src="https://github.com/thuml/Autoformer/raw/main/asset/autoformer_logo.png" height="150" alt="Autoformer Logo" /> <br> <b>Autoformer Architecture</b> </p>
-🛠️ Prerequisites
-Ensure your computer has:
+**Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting**  
+Based on the [NeurIPS 2021 paper](https://arxiv.org/abs/2106.13008)
 
-Python 3.9 (or 3.6+): Runs Autoformer.
-Git: Clones the repository.
-Visual Studio Code (optional): For editing code.
-Internet for downloading datasets and libraries.
-📥 Setup Instructions
-Set up the project step-by-step, like building a model rocket 🚀!
+---
 
-1. Create a Project Folder 📁
-Create a folder named AutoformerProject:
-Windows: Right-click on Desktop or D: drive, select New > Folder, name it AutoformerProject.
-Mac/Linux: In Finder/file explorer, right-click, select New Folder, name it AutoformerProject.
-2. Install Tools 🛠️
-Python:
-Check: Open Command Prompt (Windows: Win + R, cmd) or Terminal (Mac: Cmd + T):
-bash
+## 🚀 Project Overview
 
-Collapse
+Autoformer is a state-of-the-art model designed for **long-term time-series forecasting**, leveraging decomposition and auto-correlation mechanisms to model trends and seasonal components 📈.
 
-Wrap
+This project:
 
-Copy
+- ✅ Reproduces Autoformer results on the **Weather dataset** 🌦️  
+- ✅ Extends it to forecast **CO levels** using the **UCI Air Quality Dataset** 🌬️  
+- ✅ Analyzes outputs using `metrics_output.ipynb` 📓  
+- ✅ Was developed as part of a course assignment to enhance the open-source Autoformer repository
+
+<p align="center">
+  <img src="https://github.com/thuml/Autoformer/raw/main/asset/autoformer_logo.png" height="150" alt="Autoformer Logo" />
+  <br><b>Autoformer Architecture</b>
+</p>
+
+---
+
+## 🛠️ Prerequisites
+
+Ensure you have the following installed:
+
+- **Python 3.6+** (preferably 3.9)
+- **Git** for version control
+- **Visual Studio Code** (optional, for editing)
+- **Internet access** to download datasets and dependencies
+
+---
+
+## 📥 Setup Instructions
+
+Let’s build this like a model rocket! 🚀
+
+### 1. Create Project Folder 📁
+
+Create a folder named `AutoformerProject`.
+
+- **Windows**: Right-click → New → Folder → Name it `AutoformerProject`  
+- **Mac/Linux**: Use Finder/File Explorer to create the folder
+
+### 2. Install Tools 🛠️
+
+#### Python
+
+```bash
 python --version
-If Python 3.6+ is missing, install Python 3.9.
-Windows: Check “Add Python to PATH” during installation.
-Verify: python --version shows Python 3.9.x.
-Git:
-Check: git --version.
-Install from git-scm.com if needed.
-Verify: git --version shows git version 2.x.x.
-VS Code (optional):
-Install from code.visualstudio.com.
-3. Clone the Repository 📦
-Navigate to AutoformerProject:
-bash
+```
 
-Collapse
+If missing, install Python 3.9 from [python.org](https://www.python.org/)  
+✅ Ensure “Add Python to PATH” is selected on Windows
 
-Wrap
+#### Git
 
-Copy
+```bash
+git --version
+```
+
+If missing, download from [git-scm.com](https://git-scm.com)
+
+#### (Optional) Visual Studio Code
+
+Install from [code.visualstudio.com](https://code.visualstudio.com)
+
+---
+
+### 3. Clone the Repository 📦
+
+Navigate to the project folder:
+
+```bash
 cd ~/Desktop/AutoformerProject
-Clone the Autoformer code:
-bash
-
-Collapse
-
-Wrap
-
-Copy
 git clone https://github.com/thuml/Autoformer.git
-Enter the folder:
-bash
-
-Collapse
-
-Wrap
-
-Copy
 cd Autoformer
-Verify: Run dir (Windows) or ls (Mac/Linux) to see README.md, scripts, data.
-4. Install Dependencies 📚
-Install required libraries:
+```
 
-PyTorch:
-bash
+Check contents:
 
-Collapse
+```bash
+ls     # Mac/Linux
+dir    # Windows
+```
 
-Wrap
+---
 
-Copy
+### 4. Install Dependencies 📚
+
+#### PyTorch
+
+```bash
 pip install torch==1.9.0
-Note: For Mac M1/M2 or GPUs, check pytorch.org for the correct command.
-Other libraries:
-bash
+```
 
-Collapse
+🔧 For Mac M1/M2 or GPU setups, see [pytorch.org](https://pytorch.org/) for compatible commands.
 
-Wrap
+#### Other Libraries
 
-Copy
+```bash
 pip install numpy pandas scikit-learn
-If requirements.txt exists:
-bash
+```
 
-Collapse
+Or install from `requirements.txt`:
 
-Wrap
-
-Copy
+```bash
 pip install -r requirements.txt
-📊 5. Download Datasets
-Autoformer needs pre-processed datasets to work 📂.
+```
 
-Create a data folder (if missing):
-bash
+---
 
-Collapse
+### 5. Download Datasets 📂
 
-Wrap
+Create the data folder:
 
-Copy
+```bash
 mkdir data
-Download datasets:
-Weather: From Google Drive, download weather.csv.
-Air Quality: From UCI Repository, download AirQualityUCI.csv, rename to air_quality1.csv.
-Save both to Autoformer/data/.
-Verify: Run ls data (Mac/Linux) or dir data (Windows) to see weather.csv, air_quality1.csv.
-🏃‍♂️ Running the Autoformer
-Launch Autoformer to forecast time series, like starting a science experiment 🔬!
+```
 
-1. Weather Experiment 🌦️
-Ensure you’re in the Autoformer folder:
-bash
+Download and place files in `Autoformer/data/`:
 
-Collapse
+- `weather.csv`: [Download from Google Drive]
+- `air_quality1.csv`: From [UCI Repository](https://archive.ics.uci.edu/dataset/360/air+quality), renamed from `AirQualityUCI.csv`
 
-Wrap
+Verify:
 
-Copy
+```bash
+ls data     # or dir data (Windows)
+```
+
+---
+
+## 🏃‍♂️ Running Autoformer
+
+Time to forecast like a scientist 🔬!
+
+---
+
+### 1. Weather Dataset 🌦️
+
+Run the official script:
+
+```bash
 cd Autoformer
-Run the Weather script:
-bash
-
-Collapse
-
-Wrap
-
-Copy
 bash ./scripts/Weather_script/Autoformer.sh
-Windows: If bash doesn’t work:
-Open scripts/Weather_script/Autoformer.sh in VS Code.
-Copy the python -u main.py ... command.
-Run it in Command Prompt.
-Results appear in results/.
-2. Air Quality Experiment 🌬️
-Run the custom Air Quality script:
-bash
+```
 
-Collapse
+⚠️ On Windows:
 
-Wrap
+- Open `.sh` in VS Code
+- Copy the `python -u main.py ...` command
+- Run it in Command Prompt
 
-Copy
+Results are saved in the `results/` folder.
+
+---
+
+### 2. Air Quality Dataset 🌬️
+
+Run the custom script:
+
+```bash
 python -u run.py \
   --is_training 1 \
   --root_path ./data/ \
@@ -179,111 +190,106 @@ python -u run.py \
   --des 'AirQuality' \
   --itr 1 \
   --train_epochs 2
-Location: This is in scripts/AirQuality_script/Autoformer_air_quality.sh.
-Results are saved in results/air_quality_96_96_single_target_....
-3. Analyze Results 📓
-Use metrics_output.ipynb to check outputs:
-python
+```
 
-Collapse
+📄 Location: `scripts/AirQuality_script/Autoformer_air_quality.sh`
 
-Wrap
+Results: Saved in `results/air_quality_96_96_single_target_*`
 
-Copy
+---
+
+### 3. Analyze Results 📓
+
+Use `metrics_output.ipynb`:
+
+```python
 import os
 import numpy as np
+
 folder_path = "results/<experiment_folder>"
 print("Files:", os.listdir(folder_path))
+
 pred = np.load(f"{folder_path}/pred.npy")
 true = np.load(f"{folder_path}/true.npy")
 metrics = np.load(f"{folder_path}/metrics.npy")
-print("Predictions shape:", pred.shape)
-print("True values shape:", true.shape)
-print("Metrics shape:", metrics.shape)
+
+print("Predictions:", pred.shape)
+print("True:", true.shape)
+print("Metrics:", metrics.shape)
+
 mse = np.mean((true - pred) ** 2)
 mae = np.mean(np.abs(true - pred))
-print("Metrics:", [mse, mae])
-Find this code in metrics_output.ipynb.
-🌍 My Contribution
-I extended Autoformer by forecasting CO levels (single feature, daily frequency) using the UCI Air Quality Dataset, exploring its potential for environmental applications 🌬️.
+print("MSE:", mse, "MAE:", mae)
+```
 
-Steps
-Dataset:
-Used air_quality1.csv (13 input features, targeting CO(GT), daily frequency).
-Cleaned data to remove missing values.
-Code Changes:
-Modified data_provider/data_loader.py:
-python
+---
 
-Collapse
+## 🌍 My Contribution
 
-Wrap
+I extended the official Autoformer implementation to forecast **daily CO levels** from the **UCI Air Quality Dataset**.
 
-Copy
-class Dataset_Custom(Dataset):
-    def __init__(self, root_path, flag='train', size=None,
-                 features='M', data_path='air_quality.csv',
-                 target='CO(GT)', scale=True, timeenc=0, freq='h'):
-Updated to:
-python
+### 🔧 Steps
 
-Collapse
+- **Dataset**:  
+  - Used `air_quality1.csv` (13 features)  
+  - Target: `"CO(GT)"`, daily frequency  
+  - Cleaned missing values
 
-Wrap
+- **Code Modifications** (`data_provider/data_loader.py`):
 
-Copy
+```python
 class Dataset_Custom(Dataset):
     def __init__(self, root_path, flag='train', size=None,
                  features='M', data_path='air_quality1.csv',
                  target='CO(GT)', scale=True, timeenc=0, freq='d'):
-Experiment:
-Created scripts/AirQuality_script/Autoformer_air_quality.sh with the command above.
-Trained for 2 epochs to predict 96 time steps of CO.
-Impact:
-Demonstrates Autoformer’s ability to predict pollution levels, vital for public health.
-Challenges: Setting daily frequency, ensuring clean data.
-Details in contribution.txt.
+```
 
-📊 Results
-Using metrics_output.ipynb, here’s how Autoformer performed 📉.
+- **Script**:  
+  - Created `scripts/AirQuality_script/Autoformer_air_quality.sh`  
+  - Trained for 2 epochs, predicting 96 time steps
 
-Weather Dataset 🌦️
-Folder: results/weather_96_96_Autoformer_custom_ftM_sl96_ll48_pl96_...
-Files: pred.npy, true.npy, metrics.npy
-Shapes:
-Predictions: (10444, 96, 21) (10444 samples, 96 steps, 21 features)
-True values: (10444, 96, 21)
-Metrics: (5,)
-Metrics:
-MSE: 0.2812
-MAE: 0.3515
-Insight: Accurate multivariate forecasting, matching the paper’s quality.
-Air Quality Dataset 🌬️
-Folder: results/air_quality_96_96_single_target_Autoformer_...
-Files: pred.npy, true.npy, metrics.npy, .ipynb_checkpoints
-Shapes:
-Predictions: (1776, 96, 13) (1776 samples, 96 steps, 13 features)
-True values: (1776, 96, 13)
-Metrics: (5,)
-Metrics:
-MSE: 1.4926
-MAE: 0.7056
-Insight: Reasonable CO prediction; higher errors suggest tuning potential.
-Dataset	Samples	Features	MSE	MAE
-Weather	10444	21	0.2812	0.3515
-Air Quality	1776	13	1.4926	0.7056
-Note: metrics.npy contains 5 values (contents unclear); manual MSE/MAE align with metrics_output.ipynb.
+### 🌱 Impact
 
-📜 License
-This project uses the MIT License, as per the Autoformer repository. See LICENSE for details.
+- Showcased Autoformer’s ability to forecast **pollution levels**
+- Useful for **environmental monitoring** and **public health**
+- Key challenge: Proper frequency handling and data cleaning
 
-Features
-Error-Free: Formatted for direct copy-pasting, with verified paths, commands, and links.
-Inspired by Original: Mimics the original Autoformer README’s style (e.g., paper link, visual structure) but focuses on your project.
-Requested Sections: Includes only Project Overview, Prerequisites, Setup Instructions, 5. Download Datasets, Running the Autoformer, My Contribution, Results, License.
-Visual: Emojis (🚀, 🌬️), table for results, logo image, and code blocks for clarity.
-My Contribution:
-Specifies CO (single feature), daily frequency.
-Reflects exact data_provider/data_loader.py change (air_quality1.csv, freq='d').
-Results: Uses your MSE/MAE (1.4926, 0.7056 for Air Quality; 0.2812, 0.3515 for Weather).
-Analysis: Highlights metrics_output.ipynb for reproducibility.
+Details documented in `contribution.txt`
+
+---
+
+## 📊 Results
+
+| Dataset       | Samples | Features | MSE    | MAE    |
+|---------------|---------|----------|--------|--------|
+| Weather       | 10444   | 21       | 0.2812 | 0.3515 |
+| Air Quality   | 1776    | 13       | 1.4926 | 0.7056 |
+
+### 📌 Weather Dataset
+
+- Folder: `results/weather_96_96_Autoformer_custom_ftM_sl96_ll48_pl96_*`
+- Shapes:
+  - `pred.npy`: (10444, 96, 21)
+  - `true.npy`: (10444, 96, 21)
+- Metrics: `(5,)` → MSE: **0.2812**, MAE: **0.3515**
+- ✅ Matches original paper's performance
+
+### 📌 Air Quality Dataset
+
+- Folder: `results/air_quality_96_96_single_target_*`
+- Shapes:
+  - `pred.npy`: (1776, 96, 13)
+  - `true.npy`: (1776, 96, 13)
+- Metrics: `(5,)` → MSE: **1.4926**, MAE: **0.7056**
+- 🔍 Shows room for tuning and further optimization
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**, in alignment with the original [Autoformer repository](https://github.com/thuml/Autoformer).  
+See the `LICENSE` file for more details.
+
+---
+
+Let me know if you’d like a version with clickable section links (for GitHub’s Table of Contents) or a PDF export for submissions!
