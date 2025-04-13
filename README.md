@@ -292,4 +292,3 @@ See the `LICENSE` file for more details.
 
 ---
 
-Let me know if you’d like a version with clickable section links (for GitHub’s Table of Contents) or a PDF export for submissions!
