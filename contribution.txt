@@ -1,0 +1,12 @@
+My Contribution:
+I forecasted CO levels (single feature, daily frequency) using the UCI Air Quality dataset. This is significant because:
+- It applies Autoformer to pollution forecasting.
+- CO prediction supports public health.
+- Achieved MSE=1.4926, MAE=0.7056.
+
+Challenges:
+- Modified data_loader.py for daily frequency.
+- Cleaned air_quality1.csv.
+
+Results:
+Autoformer shows promise for environmental data.

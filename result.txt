@@ -1,0 +1,6 @@
+weather_96_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0  
+mse:0.28119513392448425, mae:0.3515268862247467
+
+air_quality_96_96_single_target_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_AirQuality_0  
+mse:1.4925740957260132, mae:0.705619752407074
+
